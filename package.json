@@ -1,0 +1,89 @@
+{
+    "name": "jedlik-express-mongoose-ts-backend-template",
+    "version": "1.0.0",
+    "description": "Jedlik project template for backend programming.",
+    "engines": {
+        "node": "16.x"
+    },
+    "main": "src/server.ts",
+    "repository": {
+        "private": false,
+        "type": "git",
+        "url": "https://github.com/nitslaszlo/jedlik-express-mongoose-ts-backend-template"
+    },
+    "scripts": {
+        "start": "node ./dist/server.js",
+        "compile": "tsc",
+        "compile:watch": "tsc --watch",
+        "postinstall": "tsc",
+        "dev": "nodemon",
+        "format": "prettier --write ./src",
+        "lint": "eslint ./src --ext .vue,.js,.ts",
+        "lint-fix": "eslint --fix ./src --ext .vue,.js,.ts",
+        "test": "jest || ECHO."
+    },
+    "author": "Nits László",
+    "license": "MIT",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.13.2",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "envalid": "^7.2.2",
+        "express": "^4.17.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "6.0.15",
+        "notenv": "^2.0.3",
+        "serve-favicon": "^2.5.0"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
+        "@types/cookie-parser": "^1.4.2",
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/jest": "^27.0.3",
+        "@types/jsonwebtoken": "^8.5.6",
+        "@types/node": "^16.11.12",
+        "@types/serve-favicon": "^2.5.3",
+        "@types/supertest": "^2.0.11",
+        "@types/validator": "^13.7.0",
+        "@typescript-eslint/eslint-plugin": "^4.32.0",
+        "@typescript-eslint/parser": "^4.32.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^27.4.4",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1",
+        "supertest": "^6.1.6",
+        "ts-jest": "^27.1.1",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.3"
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "preset": "ts-jest",
+        "verbose": true,
+        "testEnvironment": "node",
+        "transform": {
+            "^.+\\.ts$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)$",
+        "moduleFileExtensions": [
+            "ts",
+            "js",
+            "json",
+            "node"
+        ],
+        "collectCoverage": true,
+        "coverageDirectory": "coverage",
+        "collectCoverageFrom": [
+            "src/**/*.{ts,js}",
+            "!src/**/*.d.ts"
+        ]
+    }
+}

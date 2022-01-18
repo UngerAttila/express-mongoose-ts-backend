@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "298b3fef-32d4-48a3-b9e0-49faa86c6453",
+		"name": "13KEK-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST-Recept",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1ZTljMGYzOWU0ZWRjZjViOGEzYjkiLCJpYXQiOjE2NDI0OTI3MDYsImV4cCI6MTY0MjU3OTEwNn0.CSNsNM86TAY7PiFp8NMu6pprN1B-dHWOW5KQud-T9xo",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Cookie",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"receptNev\" : \"ALMÁS KRÉMES\",\r\n    \"discription\" : \"A sütőporral elkevert lisztet elmorzsoljuk a vajjal, hozzáadjuk a cukrot, a tojást és a tejföllel összegyúrjuk. (Tejfölt annyit adunk hozzá, hogy jól gyúrható tésztát kapjunk.) 3 részre osztjuk a tésztát, folcapkba csomagoljuk és hűtőben pihentetjük 30 percet. Ezután 35x20 cm-es tepsi alján 3 lapot sütünk belőle. A tepsit minden lap előtt kiolajozzuk (zsírozni vagy vajazni is lehet). Az almát megpucoljuk, lereszeljük, a cukorral, fahéjjal és a vajjal pároljuk pár percig. A krémhez elkészítjük a pudingot - a pudingport a tejjel és a cukorral megfőzzük. A vajat habosra keverjük a porcukorral, majd hozzáadjuk a kihűlt pudingot, jól kihabosítjuk. (Lehet 1 tojássárgából, vaníliás cukorból és lisztből is készíteni a pudingot.) Amikor minden kihűlt, összeállítjuk a süteményt. Az első lapra a krém kerül, erre jön a második lap, arra a párolt alma, majd a harmadik lap. Ezt befedjük a csokimázzal. A csokimázhoz a cukrot és kakaóport összekeverjük, kevés vízzel sűrűre főzzük, majd a tűzről levéve belekeverjük a vajat. Amikor kezd sűrűsödni, a sütemény tetejére öntjük, elsimítjuk.\",\r\n    \"ingredients\": [\"0.5csom\\tsütőpor\",\"3 dkg\\tliszt\",\"15 dkg\\tvaj\",\"10dkg\\tporcukor\",\"1 db\\ttojás\",\"2 ek\\ttejföl\",\"1 kg\\talma\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/receptek",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"receptek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Receptek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/receptek",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"receptek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"student001@jedlik.eu\",\r\n    \"password\" : \"student001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Cookie",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1ZTljMGYzOWU0ZWRjZjViOGEzYjkiLCJpYXQiOjE2NDI0OTI3MDYsImV4cCI6MTY0MjU3OTEwNn0.CSNsNM86TAY7PiFp8NMu6pprN1B-dHWOW5KQud-T9xo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
